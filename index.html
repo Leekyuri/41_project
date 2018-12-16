@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
+	<style type="text/css">
+		body
+		{
+			margin: 0 auto;
+			padding: 0;
+			font-family: 'Gothic A1', sans-serif;
+		}
+
+
+
+		#header
+		{
+			width: 1920px;
+			height: 100px;
+			z-index: 3;
+		}
+		#header .menu
+		{	width: 800px;
+			height: 100px;
+			margin-left: 1145px;
+			z-index: 2;
+		}
+
+		.title
+		{
+		   position: absolute;
+			top: 60px;
+			left: 200px;
+			transform: translate(-50%,-50%);
+			width: 300px;
+			height: 70px;
+			border: 1px solid #000;
+			padding: 20px;
+			box-sizing: border-box;
+			text-align: center;
+			box-shadow: 0 10px 15px rgba(0,0,0,.5);
+			overflow: hidden;
+			z-index: 200;
+		}
+		.title:before
+		{
+			content: '';
+			position: absolute;
+			top:0;
+			left: 0;
+			width:100%;
+			height: 100%;
+			background: #000;
+			mix-blend-mode: difference;
+		}
+		.title:after
+		{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -50%;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			mix-blend-mode: difference;
+			transition: 2s;
+			z-index: 0;
+		}
+		.title:hover:after
+		{
+			left:50%;
+		}
+
+		h1
+		{
+			margin: 0 0 40px;
+			font-size: 1.3em;
+			padding: 0;
+			color: #fff;
+		}
+
+
+		ul
+		{
+			margin-top: 20px;
+			display: flex;
+			z-index: 3;
+		}
+		ul li
+		{
+			list-style: none;
+			padding:10px 30px; 
+		}	
+		ul li a
+		{
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 1.1em;
+			color: #262626;
+			position: relative;
+		}
+		ul li a:before
+		{
+			content: '';
+			width: 10px;
+			height: 1px;
+			background: black;
+			position: absolute;
+			top: 100%;
+			left:0;
+			transition: .5s;
+		}
+		ul li:hover a:before
+		{
+			width:50%;
+			transform: translateX(100%);
+		}
+
+		#content {background: blue; }
+		.back {width: 100%; position: fixed; top: 50%; left:50%; transform: translate(-50%,-50%); z-index: -99;}
+		.white {height:1250px; opacity: 0.9; z-index: -9; position: absolute; top: -20px;}
+
+
+	
+		.leftFont {position: absolute; top: 270px; left: 140px; width: 350px;}
+		.Question {position: absolute; top: 150px; left: 50%; width: 500px; transform: translate(-50%,-50%);}
+		.FAQtext {position: absolute; top: 380px; left: 140px;}
+
+		.FAQtext h3 {margin-bottom: 20px;}
+		.FAQtext h4 {margin-left: 20px; margin-bottom: 40px; font-weight: 100; line-height:1.8em;}
+
+
+		.output {margin:0 auto; position: absolute; top: 480px; left: 920px; width: 600px; height: 400px;}
+		.Email {width: 260px; height: 40px; margin-bottom: 10px; margin-left: 20px;}
+		.pass {width: 260px; height: 40px; margin-bottom: 10px; margin-left: 20px;}
+		.Q {top: 50%; left:50%; width: 550px; height: 300px;  margin-bottom: 10px; margin-left: 20px;}
+
+		#but {width: 260px; height: 50px; position: absolute; top: 440px; left:50%; transform: translate(-50%,-50%);}
+
+		.Qtext {position: absolute; top: 380px; left: 940px;}
+		.Qtext h3 {font-weight: 100; line-height:1.8em;}
+
+
+		#F1
+		{
+		  	position: absolute;
+		  	top: 1080px;
+		  	left: 0px;
+		 	width: 100%;
+		}
+		#h2i
+		{
+		  	margin: 0;
+		  	padding: 0;
+		  	font-size: 0.5em
+		}
+		#F2
+		{
+		 	position: absolute;
+			top: 1130px;
+			left: 0px;
+			width: 100%;
+		}
+		#h3i 
+		{
+			margin: 0;
+			padding: 0;
+			font-size: 0.5em
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="title">
+      	<h1>Exhibition Archive</h1>
+   	</div>
+	<div id="container">
+		<img class="white" src="white.png">
+		
+		<div id="header">
+			<div class="menu">
+				<ul>
+					<li onclick="location.href=''"><a href="#">site?</a></li>
+					<li onclick="location.href='https://chaeyyyyyyy.github.io/1217/'"><a href="#">archive</a></li>
+					<li onclick="location.href='https://leekyuri.github.io/25_project-/#'"><a href="#">gallery</a></li>
+					<li onclick="location.href='https://leekyuri.github.io/11_project1/'"><a href="#">FAQ</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<img class="back" src="back.png">
+			
+			<img class="leftFont" src="left.png">
+			<img class="Question" src="Question.png">
+			<div class="FAQtext">
+				<h3>
+					1. 이익이 있습니까?
+				</h3>
+				<h4>
+					아닙니다. 저희 웹 사이트의 원래 의도는 더 많은 사람들이 전시회의 정보를 알기를<br>바라며, 
+					모든 사람들이 불편함 없이 전시 문화를 즐기기 위해서입니다.
+				</h4>
+				<h3>
+					2. 예매도 가능한가요?
+				</h3>
+				<h4>
+					아직은 그렇게 되지는 않습니다. 더욱더 편리한 서비스를 위해 노력하겠습니다.
+				</h4>		
+				<h3>
+					3. 질문에 대한 답변은 얼마나 걸리나요?
+				</h3>
+				<h4>
+					보통 2-3일 안에 해결됩니다. 혹시 그 이후에도 답변이 되지 않는다면 우리에게<br>메시지를 보내주십시오!
+				<h4>
+				<h3>
+					4. 질문에 대한 답변은 얼마나 걸리나요?
+				</h3>
+				<h4>
+					보통 2-3일 안에 해결됩니다. 혹시 그 이후에도 답변이 되지 않는다면 우리에게<br> 메시지를 보내주십시오!
+				</h4>
+			</div>
+
+			<div class="output">
+				<input class="Email" type="text" placeholder="e-mail" size="3" >
+				<input class="pass" type="text" placeholder="password" size="3">
+				<input class="Q" type="text" placeholder="질문" size="3" >
+				<button id="but" onclick="ok()">확인</button>
+			</div>
+
+			<div class="Qtext">
+				<h3>
+					그동안 답답했던 것들, 개선했으면 하는 문제점, 궁금한 모든 것을 <br>질문해주세요.
+					빠른 시일내로 답해드릴 것을 약속합니다.
+				</h3>
+			</div>
+
+
+		</div>
+	</div>
+	<script type="text/javascript">
+		function ok() {
+  			alert("질문이 등록 되었습니다!");
+		}
+		
+
+	</script>
+
+	<footer>
+		<div id="F1">
+			<center>
+				<h2 id="h2i">ⓒ2018 expber All rights reserved<br><br></h2>
+			<hr>
+			</center>
+		</div>
+		<div id="F2">
+			<center>
+				<h3 id="h3i">PRIVACY POLICY　　　　　　　│　　　　　　　TERMS AND CONDITIONS　　　　　　　│　　　　　　　GET SUBSCRIBED<br><br>
+				이메일 문의　　　│　　　개인정보취급방침　　　│　　　권리 침해 신고　　　│　　　광고　　　│　　　모바일　　　│　　　 앱 설치<br><br><br><br>
+				</h3>
+			</center>
+		</div>
+	</footer>  
+</body>
+</html>
